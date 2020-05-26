@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6AE5487-3E1C-46E3-B9FA-B1904BB2B4A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hsf.EF.NewIotData</RootNamespace>
+    <AssemblyName>Hsf.EF.NewIotData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="model\android_config.cs" />
+    <Compile Include="model\android_scene.cs" />
+    <Compile Include="model\android_scene_img.cs" />
+    <Compile Include="model\android_user_info.cs" />
+    <Compile Include="model\backend_config.cs" />
+    <Compile Include="NewiotDBContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="model\t_customer.cs" />
+    <Compile Include="model\t_customer_user.cs" />
+    <Compile Include="model\t_device.cs" />
+    <Compile Include="model\t_deviceid_pool.cs" />
+    <Compile Include="model\t_device_ability.cs" />
+    <Compile Include="model\t_device_ability_option.cs" />
+    <Compile Include="model\t_device_ability_set.cs" />
+    <Compile Include="model\t_device_ability_set_relation.cs" />
+    <Compile Include="model\t_device_alarm_data.cs" />
+    <Compile Include="model\t_device_customer_relation.cs" />
+    <Compile Include="model\t_device_customer_user_relation.cs" />
+    <Compile Include="model\t_device_data_alarm.cs" />
+    <Compile Include="model\t_device_data_control.cs" />
+    <Compile Include="model\t_device_data_sensor.cs" />
+    <Compile Include="model\t_device_group.cs" />
+    <Compile Include="model\t_device_group_item.cs" />
+    <Compile Include="model\t_device_group_scene.cs" />
+    <Compile Include="model\t_device_model.cs" />
+    <Compile Include="model\t_device_model_ability.cs" />
+    <Compile Include="model\t_device_model_ability_option.cs" />
+    <Compile Include="model\t_device_model_format.cs" />
+    <Compile Include="model\t_device_model_format_item.cs" />
+    <Compile Include="model\t_device_operlog.cs" />
+    <Compile Include="model\t_device_params.cs" />
+    <Compile Include="model\t_device_sensor_stat.cs" />
+    <Compile Include="model\t_device_sensor_warn.cs" />
+    <Compile Include="model\t_device_team.cs" />
+    <Compile Include="model\t_device_team_item.cs" />
+    <Compile Include="model\t_device_team_scene.cs" />
+    <Compile Include="model\t_device_timer.cs" />
+    <Compile Include="model\t_device_timer_day.cs" />
+    <Compile Include="model\t_device_type.cs" />
+    <Compile Include="model\t_device_type_abilitys.cs" />
+    <Compile Include="model\t_device_type_ability_set.cs" />
+    <Compile Include="model\t_dict.cs" />
+    <Compile Include="model\t_energy_id.cs" />
+    <Compile Include="model\t_mail_data_device.cs" />
+    <Compile Include="model\t_permission.cs" />
+    <Compile Include="model\t_product.cs" />
+    <Compile Include="model\t_productid_pool.cs" />
+    <Compile Include="model\t_project_base_info.cs" />
+    <Compile Include="model\t_project_extra_device.cs" />
+    <Compile Include="model\t_project_implement_log.cs" />
+    <Compile Include="model\t_project_job_info.cs" />
+    <Compile Include="model\t_project_job_log.cs" />
+    <Compile Include="model\t_project_material_info.cs" />
+    <Compile Include="model\t_project_material_log.cs" />
+    <Compile Include="model\t_project_plan_info.cs" />
+    <Compile Include="model\t_project_plan_info_model.cs" />
+    <Compile Include="model\t_project_rule.cs" />
+    <Compile Include="model\t_role.cs" />
+    <Compile Include="model\t_role_permission.cs" />
+    <Compile Include="model\t_statstic_customer_user_live.cs" />
+    <Compile Include="model\t_user.cs" />
+    <Compile Include="model\t_user_feedback.cs" />
+    <Compile Include="model\t_user_message.cs" />
+    <Compile Include="model\t_user_message_log.cs" />
+    <Compile Include="model\wx_bg_img.cs" />
+    <Compile Include="model\wx_config.cs" />
+    <Compile Include="model\wx_format.cs" />
+    <Compile Include="model\wx_format_items.cs" />
+    <Compile Include="model\wx_format_page.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
